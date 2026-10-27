@@ -1,0 +1,18 @@
+html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+body { user-select: none; -webkit-user-select: none; -webkit-tap-highlight-color: transparent; }
+#stage { position: absolute; left: 0; top: 0; width: 1024px; height: 768px; background: #000;
+         transform-origin: 0 0; overflow: hidden; font-family: Arial, "Helvetica Neue", Helvetica, "Liberation Sans", sans-serif; }
+#layer, #eye { position: absolute; left: 0; top: 0; width: 1024px; height: 768px; }
+#layer { overflow: hidden; }
+#eye { pointer-events: none; }
+#layer > * { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+#layer img { display: block; max-width: none; pointer-events: none; image-rendering: auto; }
+.t { position: absolute; white-space: pre; margin: 0; padding: 0; pointer-events: none; }
+.btn { cursor: pointer; outline: none; }
+.btn.ghost { cursor: default; }
+.btn:focus-visible:not(.ghost) { outline: 2px solid #8fc4ff; outline-offset: 2px; }
+.btn > * { position: absolute; }
+#bye { position: absolute; inset: 0; background: #000; color: #cfd8e3; display: flex; flex-direction: column;
+       align-items: center; justify-content: center; font-size: 28px; cursor: pointer; z-index: 5; }
+#bye[hidden] { display: none; }
+#bye .small { font-size: 16px; opacity: .7; }
